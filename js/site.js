@@ -5,16 +5,25 @@ function getValues(){
     let startValue = document.getElementById("startValue").value;
     let endValue = document.getElementById("endValue").value;
 
-    alert("The Start Value: " + startValue);
-    //call generate numbers
+    //call generate numbers function
+    let numbers = generateNumbers(startValue, endValue);
 
     //call displayNumbers
 }
 
 //generate numbers from start and ending values 
 //logic function(s)
-function generateNumbers(){
+function generateNumbers(sValue, eValue){
 
+    let numbers = [];
+
+    //we want to get all numbers from start to end 
+    //for loop ==> start/when it ends/going up or down
+    for (let i = sValue; i <= eValue; i++) {        
+        // loop will execute intil i = eValue
+        numbers.push(i);
+    }
+    return numbers;
 }
 
 //display the output and mark even numbers BOLD
