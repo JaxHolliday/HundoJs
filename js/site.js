@@ -5,8 +5,20 @@ function getValues(){
     let startValue = document.getElementById("startValue").value;
     let endValue = document.getElementById("endValue").value;
 
-    //call generate numbers function
-    let numbers = generateNumbers(startValue, endValue);
+    //we need to validate our integers 
+    //coverting string to numbers(int)
+    startValue = parseInt(startValue);
+    endValue = parseInt(endValue);
+
+    //
+    if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
+        //call generate numbers function
+        let numbers = generateNumbers(startValue, endValue);
+
+    } else {
+        alert("You must enter integers");
+    }
+
 
     //call displayNumbers
 }
